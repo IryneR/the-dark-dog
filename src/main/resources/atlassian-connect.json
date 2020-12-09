@@ -1,0 +1,48 @@
+{
+  "key": "the-dark-dog",
+  "baseUrl": "${addon.base-url}",
+  "name": "The Dark Dog plugin",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+  "modules": {
+    "generalPages": [
+      {
+        "key": "example-connect-view",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "View"
+        },
+        "url": "/connect-view",
+        "conditions": [
+          {
+            "condition": "user_is_logged_in"
+          }
+        ]
+      }
+    ],
+    "webSections": [
+      {
+        "location": "admin_plugins_menu",
+        "key": "example-connect-section",
+        "name": {
+          "value": "Connect Spring Boot"
+        }
+      }
+    ],
+    "adminPages": [
+      {
+        "name": {
+          "value": "Edit"
+        },
+        "key": "example-connect-edit",
+        "url": "/connect-edit",
+        "location": "admin_plugins_menu/example-connect-section"
+      }
+    ]
+  }
+}

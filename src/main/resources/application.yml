@@ -1,0 +1,19 @@
+spring.jpa.hibernate.ddl-auto: update
+spring.datasource.url: jdbc:hsqldb:file:addon-db # Use a file-based backing store for HSQL
+addon.base-url: https://92d2c53c586d.ngrok.io
+logging.level.com.atlassian.connect.spring: DEBUG
+
+#spring.thymeleaf.cache: false
+
+
+
+#addon.base-url: http://9621619c392f.ngrok.io
+
+#logging.level.com.atlassian.connect.spring: DEBUG
+
+#security:
+ # basic:
+ #   path: /basic
+  #  enabled: true
+  #ignored: /public
+
