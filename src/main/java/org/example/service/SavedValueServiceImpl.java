@@ -16,9 +16,12 @@ public class SavedValueServiceImpl implements SavedValueService {
     @Override
 
     public SavedValueEntity getByClientKey(String clientKey) {
-
-        return savedValueRepository.findById(clientKey).get();
-
+        try{
+        return savedValueRepository.findById(clientKey).get();}
+        catch(Exception e){
+            return new SavedValueEntity();
+        }
+        //return null;
     }
 
     @Override

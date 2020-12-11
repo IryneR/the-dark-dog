@@ -1,8 +1,11 @@
-<html>
-<body>
+
 #set($title="View Value")
 
 #parse("header.vm")
+
+<html>
+<script src="https://connect-cdn.atl-paas.net/all.js"></script>
+<body>
 
 <p>Your saved value: ${value}</p>
 

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 
@@ -20,7 +21,7 @@ public class ConnectSpringBootController {
     private SavedValueService savedValueService;
 
     @RequestMapping(value = "/connect-view", method = RequestMethod.GET)
-
+    //@ResponseBody
     public String getViewPage(@AuthenticationPrincipal AtlassianHostUser hostUser, Model model) {
 
         addValueAttributeToModel(hostUser, model);
@@ -29,8 +30,9 @@ public class ConnectSpringBootController {
 
     }
 
-    @RequestMapping(value = "/connect-edit", method = RequestMethod.GET)
 
+    @RequestMapping(value = "/connect-edit", method = RequestMethod.GET)
+    //@ResponseBody
     public String getEditPage(@AuthenticationPrincipal AtlassianHostUser hostUser, Model model) {
 
         addValueAttributeToModel(hostUser, model);
@@ -40,7 +42,7 @@ public class ConnectSpringBootController {
     }
 
     @RequestMapping(value = "/connect-edit", method = RequestMethod.POST)
-
+    //@ResponseBody
     public void saveValue(@AuthenticationPrincipal AtlassianHostUser hostUser, @ModelAttribute("text-input") String value) {
 
         savedValueService.setForClientKey(hostUser.getHost().getClientKey(), value);

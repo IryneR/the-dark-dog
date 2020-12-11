@@ -12,23 +12,18 @@
   "modules": {
     "generalPages": [
       {
-        "key": "example-connect-view",
+        "key": "connect-view",
         "location": "system.top.navigation.bar",
         "name": {
           "value": "View"
         },
-        "url": "/connect-view",
-        "conditions": [
-          {
-            "condition": "user_is_logged_in"
-          }
-        ]
+        "url": "/connect-view"
       }
     ],
     "webSections": [
       {
         "location": "admin_plugins_menu",
-        "key": "example-connect-section",
+        "key": "connect-section",
         "name": {
           "value": "Connect Spring Boot"
         }
@@ -39,7 +34,7 @@
         "name": {
           "value": "Edit"
         },
-        "key": "example-connect-edit",
+        "key": "connect-edit",
         "url": "/connect-edit",
         "location": "admin_plugins_menu/example-connect-section"
       }
